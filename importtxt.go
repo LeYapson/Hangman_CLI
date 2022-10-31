@@ -7,7 +7,9 @@ import (
     "os"
 )
 
-func main() {
+func importtxt() []string {
+
+    word := []string{}
 
     f, err := os.Open("words2.txt")
 
@@ -21,7 +23,7 @@ func main() {
 
     for scanner.Scan() {
 
-        fmt.Println(scanner.Text())
+        word =append(word,scanner.Text())
     }
 
     if err := scanner.Err(); err != nil {
