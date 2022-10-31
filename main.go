@@ -1,9 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	
+)
 
 func main() {
 
-	fmt.Println(importhang())
+	fmt.Println(hang8())
 	fmt.Println(importtxt())
 }
