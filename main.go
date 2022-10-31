@@ -4,6 +4,6 @@ import "fmt"
 
 func main() {
 
-	/*fmt.Println(importhang())*/
+	fmt.Println(importhang())
 	fmt.Println(importtxt())
 }
