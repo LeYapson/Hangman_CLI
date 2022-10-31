@@ -2,13 +2,12 @@ package main
 
 import (
     "bufio"
+    "fmt"
     "log"
     "os"
 )
 
-func hang8() []string {
-
-    word := []string{}
+func hang8() {
 
     f, err := os.Open("hang8.txt")
 
@@ -22,11 +21,10 @@ func hang8() []string {
 
     for scanner.Scan() {
 
-        word =append(word,scanner.Text())
+        fmt.Println(scanner.Text())
     }
 
     if err := scanner.Err(); err != nil {
         log.Fatal(err)
     }
-    return word
 }

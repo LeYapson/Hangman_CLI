@@ -1,32 +1,30 @@
 package main
 
 import (
-	"bufio"
-	"log"
-	"os"
+    "bufio"
+    "fmt"
+    "log"
+    "os"
 )
 
-func hang10() []string {
+func hang10() {
 
-	word := []string{}
+    f, err := os.Open("hang10.txt")
 
-	f, err := os.Open("hang10.txt")
+    if err != nil {
+        log.Fatal(err)
+    }
 
-	if err != nil {
-		log.Fatal(err)
-	}
+    defer f.Close()
 
-	defer f.Close()
+    scanner := bufio.NewScanner(f)
 
-	scanner := bufio.NewScanner(f)
+    for scanner.Scan() {
 
-	for scanner.Scan() {
+        fmt.Println(scanner.Text())
+    }
 
-		word = append(word, scanner.Text())
-	}
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
-	return word
+    if err := scanner.Err(); err != nil {
+        log.Fatal(err)
+    }
 }

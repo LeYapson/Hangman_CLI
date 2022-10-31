@@ -2,13 +2,12 @@ package main
 
 import (
     "bufio"
+    "fmt"
     "log"
     "os"
 )
 
-func importtxt() []string {
-
-    word := []string{}
+func ImportTxt() {
 
     f, err := os.Open("words2.txt")
 
@@ -22,11 +21,10 @@ func importtxt() []string {
 
     for scanner.Scan() {
 
-        word =append(word,scanner.Text())
+        fmt.Println(scanner.Text())
     }
 
     if err := scanner.Err(); err != nil {
         log.Fatal(err)
     }
-    return word
 }
