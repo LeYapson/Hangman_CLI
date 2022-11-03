@@ -1,30 +1,25 @@
 package main
-
+ 
 import (
     "bufio"
-    "fmt"
-    "log"
     "os"
 )
+ 
+func ImportTxt() []string{
 
-func ImportTxt() {
+	var word []string
+	
+ 
+    readFile, _ := os.Open("words2.txt")
 
-    f, err := os.Open("words2.txt")
-
-    if err != nil {
-        log.Fatal(err)
+    fileScanner := bufio.NewScanner(readFile)
+ 
+    fileScanner.Split(bufio.ScanLines)
+  
+    for fileScanner.Scan() {
+        word = append(word, fileScanner.Text())
     }
-
-    defer f.Close()
-
-    scanner := bufio.NewScanner(f)
-
-    for scanner.Scan() {
-
-        fmt.Println(scanner.Text())
-    }
-
-    if err := scanner.Err(); err != nil {
-        log.Fatal(err)
-    }
+  
+    readFile.Close()
+	return word
 }
