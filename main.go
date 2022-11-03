@@ -2,7 +2,7 @@ package main
 
 
 func main() {
-	hang1()
+	ImportHang()
 	ImportTxt()
-	Input("faut écrire now : ")
+	Input("faut faire chap chap: ")
 }
