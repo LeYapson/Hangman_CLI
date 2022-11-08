@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
 	"math/rand"
 	"time"
 
@@ -22,7 +22,6 @@ func PickandRandom() string {
 			array[i] = '_'
 			
 		}
-		fmt.Print(LettertoShow(word))
 		z01.PrintRune(array[i])
 	}
 	return string(array)
