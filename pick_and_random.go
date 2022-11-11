@@ -17,6 +17,8 @@ func PickandRandom() string {
 	wordtofind := ImportTxt()
 	word := (wordtofind[rand.Intn(len(wordtofind))])
 	array := []rune(word)
+	fmt.Print(word)
+	
 	for i := 0; i < len(array); i++{
 		if array[i] >= 'a' && array[i] <= 'z' {
 			
@@ -24,7 +26,9 @@ func PickandRandom() string {
 			
 		}
 		z01.PrintRune(array[i])
+		
 	}
+	print(LettertoShow(word))
 	return string(array)
 	
 	
@@ -39,7 +43,7 @@ func LettertoShow(s string) string {
 	var lettertoprint byte
 	for i:=0; i<=len(letter)/2-1; i++ {
 		lettertoprint = (letter[rand.Intn(len(letter))])
-	fmt.Print(string(lettertoprint))
+	print(string(lettertoprint))
 	}
 	return string(lettertoprint)
 }
