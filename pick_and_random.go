@@ -2,6 +2,7 @@ package main
 
 import (
 	//"fmt"
+	"fmt"
 	"math/rand"
 	"time"
 
@@ -33,12 +34,12 @@ func PickandRandom() string {
 }
 
 func LettertoShow(s string) string {
-	array := []rune(s)
-	n := len(array) / 2 - 1
-
-	array = append(array, rune(n))
-
-
-	return string(array)
-
+	rand.Seed(time.Now().UnixNano())
+	letter := (s)
+	var lettertoprint byte
+	for i:=0; i<=len(letter)/2-1; i++ {
+		lettertoprint = (letter[rand.Intn(len(letter))])
+	fmt.Print(string(lettertoprint))
+	}
+	return string(lettertoprint)
 }
