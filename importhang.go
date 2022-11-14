@@ -1,30 +1,30 @@
 package main
 
 import (
-    "bufio"
-    "fmt"
-    "log"
-    "os"
+	"bufio"
+	"fmt"
+	"log"
+	"os"
 )
 
 func ImportHang() {
 
-    f, err := os.Open("hangman.txt")
+	f, err := os.Open("hangman.txt")
 
-    if err != nil {
-        log.Fatal(err)
-    }
+	if err != nil {
+		log.Fatal(err)
+	}
 
-    defer f.Close()
+	defer f.Close()
 
-    scanner := bufio.NewScanner(f)
+	scanner := bufio.NewScanner(f)
 
-    for scanner.Scan() {
+	for scanner.Scan() {
 
-        fmt.Println(scanner.Text())
-    }
+		fmt.Println(scanner.Text())
+	}
 
-    if err := scanner.Err(); err != nil {
-        log.Fatal(err)
-    }
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
 }

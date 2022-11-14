@@ -18,32 +18,26 @@ func PickandRandom() string {
 	word := (wordtofind[rand.Intn(len(wordtofind))])
 	array := []rune(word)
 	fmt.Print(word)
-	
-	for i := 0; i < len(array); i++{
+
+	for i := 0; i < len(array); i++ {
 		if array[i] >= 'a' && array[i] <= 'z' {
-			
+
 			array[i] = '_'
-			
+
 		}
 		z01.PrintRune(array[i])
-		
+
 	}
 	print(LettertoShow(word))
 	return string(array)
-	
-	
-	
-	
 
 }
 
 func LettertoShow(s string) string {
 	rand.Seed(time.Now().UnixNano())
-	letter := (s)
-	var lettertoprint byte
-	for i:=0; i<=len(letter)/2-1; i++ {
-		lettertoprint = (letter[rand.Intn(len(letter))])
-	print(string(lettertoprint))
-	}
-	return string(lettertoprint)
+	in := s
+    inRune := []rune(in)
+    randomIndex := rand.Intn(len(inRune))
+    pick := inRune[randomIndex]
+	return string(pick)
 }

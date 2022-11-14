@@ -11,5 +11,3 @@ func Input(str string) string {
 	input, _ := reader.ReadString('\n')
 	return input
 }
-	
-	
