@@ -28,7 +28,7 @@ func PickandRandom() string {
 		z01.PrintRune(array[i])
 
 	}
-	print(LettertoShow(word))
+	LettertoShow(word)
 	return string(array)
 
 }
