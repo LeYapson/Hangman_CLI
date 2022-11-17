@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	
 	"math/rand"
 	"time"
 )
@@ -15,7 +15,7 @@ func LettertoShow(s string) string {
 
 		randomIndex := rand.Intn(len(inRune))
 		pick = inRune[randomIndex]
-		fmt.Print(string(pick))
+		print(string(pick))
 	}
 
 	return string(pick)
