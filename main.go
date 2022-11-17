@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
 
@@ -29,21 +31,20 @@ func join(strings []string, separator string) string {
 	return s + strings[lastIdx]
 }
 
-func prompt(strings ...string) string {
-	return ""
-}
-
-func getLetter(found []string) string {
+func getLetter(found []string) (string, error) {
 
 	alphabet := "abcdefghijklmnopqrstuvwxyz"
 	for true {
-		letter := prompt("pick a letter", join(found, " "))
+		letter, err := prompt("pick a letter", join(found, " "))
+		if err != nil {
+			return "", err
+		}
 		if len(letter) == 1 && containsAny(alphabet, []string{letter}) {
-			return letter
+			return letter, nil
 		}
 		fmt.Println("Invalid input: must enter a single lowercase letter.")
 	}
-	return ""
+	return "", nil
 }
 
 func updateFound(found []string, word string, letter string) bool {
@@ -60,20 +61,26 @@ func updateFound(found []string, word string, letter string) bool {
 }
 
 
+
+
 func main() {
 	words := ImportTxt()
 	t := time.Now()
 	rand.Seed(t.UnixNano())
 	idx := rand.Intn(len(words))
 	word := words[idx]
-	nguesses := len(word)
+	nguesses := 10
 	found := []string{}
 	for i := 0; i < len(word); i++ {
 		found = append(found, "_")
 	}
 	for nguesses > 0 {
 		fmt.Println("You have", nguesses, "remaining guesses.")
-		letter := getLetter(found)
+		letter, err := getLetter(found)
+		if err != nil {
+			fmt.Println("error reading from console")
+			return
+		}
 		if !containsAny(word, []string{letter}) {
 			nguesses--
 		}
@@ -83,4 +90,18 @@ func main() {
 		}
 	}
 	fmt.Println("you lose! the word was:", word)
+}
+
+
+func prompt(vals ...interface{}) (string, error) {
+	if len(vals) != 0 {
+		fmt.Println(vals...)
+	}
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	err := scanner.Err()
+	if err != nil {
+		return "", err
+	}
+	return scanner.Text(), nil
 }
