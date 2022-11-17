@@ -1,7 +1,6 @@
 package main
 
 import (
-	
 	"math/rand"
 	"time"
 )
@@ -15,7 +14,9 @@ func LettertoShow(s string) string {
 
 		randomIndex := rand.Intn(len(inRune))
 		pick = inRune[randomIndex]
-		print(string(pick))
+		if pick != pick+1 {
+			print(string(pick))
+		}
 	}
 
 	return string(pick)
