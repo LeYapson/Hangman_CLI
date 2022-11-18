@@ -2,6 +2,15 @@ package main
 
 import "fmt"
 
+func printhang0() {
+	hang := ImportHang()
+
+	for i :=1; i<= 7; i++ {
+		fmt.Println(hang[i])
+	}
+
+}
+
 func printhang1() {
 	hang := ImportHang()
 
