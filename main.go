@@ -28,7 +28,7 @@ func main() {
 			nguesses--
 			if nguesses == 9 {
 				printhang0()
-			} else if nguesses == 8{
+			} else if nguesses == 8 {
 				printhang1()
 			} else if nguesses == 7 {
 				printhang2()
@@ -47,7 +47,7 @@ func main() {
 			} else if nguesses == 0 {
 				printhang9()
 			}
-			
+
 		}
 		if updateFound(found, word, letter) {
 			fmt.Println("gg mtn bouge, le mot c'était bien ", word)
