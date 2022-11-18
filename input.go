@@ -1,12 +1,12 @@
-package main 
+package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
-	"bufio"
 )
 
-func prompt(vals ...interface{}) (string, error) {
+func input(vals ...interface{}) (string, error) {
 	if len(vals) != 0 {
 		fmt.Println(vals...)
 	}

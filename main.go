@@ -18,10 +18,10 @@ func main() {
 		found = append(found, "_")
 	}
 	for nguesses > 0 {
-		fmt.Println("You have", nguesses, "remaining guesses.")
+		fmt.Println("Tu as", nguesses, "essais pour réussir")
 		letter, err := getLetter(found)
 		if err != nil {
-			fmt.Println("error reading from console")
+			fmt.Println("ERREUR SUR LA CONSOLE")
 			return
 		}
 		if !containsAny(word, []string{letter}) {
@@ -32,5 +32,5 @@ func main() {
 			return
 		}
 	}
-	fmt.Println("ff la prochaine fois, le mot c'était", word, "(sale merde)")
+	fmt.Println("ff la prochaine fois, le mot c'était", word, "try again (sale merde)")
 }
