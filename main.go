@@ -26,6 +26,7 @@ func main() {
 		}
 		if !containsAny(word, []string{letter}) {
 			nguesses--
+			
 		}
 		if updateFound(found, word, letter) {
 			fmt.Println("gg mtn bouge, le mot c'était bien ", word)

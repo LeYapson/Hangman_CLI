@@ -2,29 +2,23 @@ package main
 
 import (
 	"bufio"
-	"fmt"
-	"log"
 	"os"
 )
 
-func ImportHang() {
+func ImportHang() []string {
 
-	f, err := os.Open("hangman.txt")
+	var hang []string
 
-	if err != nil {
-		log.Fatal(err)
+	readFile, _ := os.Open("hangman.txt")
+
+	fileScanner := bufio.NewScanner(readFile)
+
+	fileScanner.Split(bufio.ScanLines)
+
+	for fileScanner.Scan() {
+		hang = append(hang, fileScanner.Text())
 	}
 
-	defer f.Close()
-
-	scanner := bufio.NewScanner(f)
-
-	for scanner.Scan() {
-
-		fmt.Println(scanner.Text())
-	}
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
+	readFile.Close()
+	return hang
 }
