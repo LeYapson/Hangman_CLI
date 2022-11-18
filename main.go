@@ -28,9 +28,9 @@ func main() {
 			nguesses--
 		}
 		if updateFound(found, word, letter) {
-			fmt.Println("you win! the word was:", word)
+			fmt.Println("gg mtn bouge, le mot c'était bien ", word)
 			return
 		}
 	}
-	fmt.Println("you lose! the word was:", word)
+	fmt.Println("ff la prochaine fois, le mot c'était", word, "(sale merde)")
 }
