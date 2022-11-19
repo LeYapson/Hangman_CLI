@@ -32,7 +32,7 @@ func main() {
 				printhang1()
 			} else if nguesses == 7 {
 				printhang2()
-			} else if nguesses == 6 {
+			} else if nguesses == 6 {                  //affichage du hangman
 				printhang3()
 			} else if nguesses == 5 {
 				printhang4()
