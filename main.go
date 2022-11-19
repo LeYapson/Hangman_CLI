@@ -17,6 +17,11 @@ func main() {
 	for i := 0; i < len(word); i++ {
 		found = append(found, "_")
 	}
+	if nguesses == 10 {
+		fmt.Println("INDICE: les lettre suivantes sont présentes dans le mot :","\n")
+		LettertoShow(word)
+		fmt.Println("\n")
+	}
 	for nguesses > 0 {
 		fmt.Println("Tu as", nguesses, "essais pour réussir")
 		letter, err := getLetter(found)
