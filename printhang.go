@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func printhang0() {       // coordonnées du hangman
+func printhang0() { // coordonnées du hangman
 	hang := ImportHang()
 
 	for i := 1; i <= 7; i++ {
@@ -12,7 +12,7 @@ func printhang0() {       // coordonnées du hangman
 }
 
 func printhang1() {
-	hang := ImportHang()   //*
+	hang := ImportHang() //*
 
 	for i := 7; i < 15; i++ {
 		fmt.Println(hang[i])
@@ -20,7 +20,7 @@ func printhang1() {
 
 }
 
-func printhang2() {   //*
+func printhang2() { //*
 	hang := ImportHang()
 
 	for i := 15; i < 23; i++ {
@@ -29,7 +29,7 @@ func printhang2() {   //*
 
 }
 
-func printhang3() {    //*
+func printhang3() { //*
 	hang := ImportHang()
 
 	for i := 23; i < 31; i++ {
@@ -38,7 +38,7 @@ func printhang3() {    //*
 
 }
 
-func printhang4() {     //*
+func printhang4() { //*
 	hang := ImportHang()
 
 	for i := 31; i < 39; i++ {
@@ -47,7 +47,7 @@ func printhang4() {     //*
 
 }
 
-func printhang5() {      //*
+func printhang5() { //*
 	hang := ImportHang()
 
 	for i := 39; i < 47; i++ {
@@ -56,7 +56,7 @@ func printhang5() {      //*
 
 }
 
-func printhang6() {     //*
+func printhang6() { //*
 	hang := ImportHang()
 
 	for i := 47; i < 55; i++ {
@@ -65,7 +65,7 @@ func printhang6() {     //*
 
 }
 
-func printhang7() {     //*
+func printhang7() { //*
 	hang := ImportHang()
 
 	for i := 55; i < 63; i++ {
@@ -74,7 +74,7 @@ func printhang7() {     //*
 
 }
 
-func printhang8() {     //*
+func printhang8() { //*
 	hang := ImportHang()
 
 	for i := 63; i < 71; i++ {
@@ -83,7 +83,7 @@ func printhang8() {     //*
 
 }
 
-func printhang9() {     //*
+func printhang9() { //*
 	hang := ImportHang()
 
 	for i := 71; i < 79; i++ {
