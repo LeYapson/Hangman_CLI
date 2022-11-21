@@ -1,6 +1,6 @@
 package main
 
-func updateFound(found []string, word string, letter string) bool {
+func updateFound(found []string, word string, letter string) bool {    // fin du hangman (savoir si une les letre on eter trouver)
 	complete := true
 	for i, r := range word {
 		if letter == string(r) {

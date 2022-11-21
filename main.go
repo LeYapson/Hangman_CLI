@@ -17,19 +17,19 @@ func main() {
 	for i := 0; i < len(word); i++ {
 		found = append(found, "_")
 	}
-	if nguesses == 10 {
+	if nguesses == 10 {      //nombre d'essais
 		fmt.Println("INDICE: les lettre suivantes sont présentes dans le mot :","\n")
 		LettertoShow(word)
 		fmt.Println("\n")
 	}
-	for nguesses > 0 {
+	for nguesses > 0 {		//perdu
 		fmt.Println("Tu as", nguesses, "essais pour réussir")
 		letter, err := getLetter(found)
 		if err != nil {
 			fmt.Println("ERREUR SUR LA CONSOLE")
 			return
 		}
-		if !containsAny(word, []string{letter}) {
+		if !containsAny(word, []string{letter}) {       // aficher le hangman
 			nguesses--
 			if nguesses == 9 {
 				printhang0()
@@ -37,7 +37,7 @@ func main() {
 				printhang1()
 			} else if nguesses == 7 {
 				printhang2()
-			} else if nguesses == 6 {                  //affichage du hangman
+			} else if nguesses == 6 {
 				printhang3()
 			} else if nguesses == 5 {
 				printhang4()

@@ -5,8 +5,7 @@ import (
 	"os"
 )
 
-func ImportTxt() []string {
-
+func ImportTxt() []string {    //import les mots
 	var word []string
 
 	readFile, _ := os.Open("words2.txt")

@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func LettertoShow(s string) string {
+func LettertoShow(s string) string {        //aficher les lettre dans le int
 	rand.Seed(time.Now().UnixNano())
 	inRune := []rune(s)
 	var pick rune
