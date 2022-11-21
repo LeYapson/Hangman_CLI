@@ -55,7 +55,7 @@ func main() {
 
 		}
 		if updateFound(found, word, letter) {
-			fmt.Println("gg mtn bouge, le mot c'était bien ", word)       //fin du jeu
+			fmt.Println("gg mtn bouge, le mot c'était bien ", word) //fin du jeu
 			return
 		}
 	}
