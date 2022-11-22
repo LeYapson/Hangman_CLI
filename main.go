@@ -22,7 +22,7 @@ func main() {
 		LettertoShow(word)
 		fmt.Println("\n")
 	}
-	for nguesses > 0 { //nbre essais
+	for nguesses > 0 { //nbre essais + input
 		fmt.Println("Tu as", nguesses, "essais pour réussir")
 		letter, err := getLetter(found)
 		if err != nil {
