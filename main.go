@@ -35,9 +35,9 @@ func main() {
 
 		}
 		if updateFound(found, word, letter) {
-			fmt.Println("gg mtn bouge, le mot c'était bien ", word) //fin du jeu
+			fmt.Println("Bravo, tu as gagné, le mot était bien ", word) //fin du jeu
 			return
 		}
 	}
-	fmt.Println("ff la prochaine fois, le mot c'était", word, "try again (sale merde)")
+	fmt.Println("ff la prochaine fois, le mot c'était", word, "tu peux toujours retenter ta chance")
 }
