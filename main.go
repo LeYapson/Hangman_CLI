@@ -31,27 +31,7 @@ func main() {
 		}
 		if !containsAny(word, []string{letter}) { // aficher le hangman
 			nguesses--
-			if nguesses == 9 {
-				printhang0()
-			} else if nguesses == 8 {
-				printhang1()
-			} else if nguesses == 7 {
-				printhang2()
-			} else if nguesses == 6 {
-				printhang3()
-			} else if nguesses == 5 {
-				printhang4()
-			} else if nguesses == 4 {
-				printhang5()
-			} else if nguesses == 3 {
-				printhang6()
-			} else if nguesses == 2 {
-				printhang7()
-			} else if nguesses == 1 {
-				printhang8()
-			} else if nguesses == 0 {
-				printhang9()
-			}
+			PrintHang(nguesses)
 
 		}
 		if updateFound(found, word, letter) {

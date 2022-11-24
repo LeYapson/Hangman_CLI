@@ -91,3 +91,27 @@ func printhang9() { //*
 	}
 
 }
+func PrintHang(n int) {
+	if n == 9 {
+		printhang0()
+	} else if n == 8 {
+		printhang1()
+	} else if n == 7 {
+		printhang2()
+	} else if n == 6 {
+		printhang3()
+	} else if n == 5 {
+		printhang4()
+	} else if n == 4 {
+		printhang5()
+	} else if n == 3 {
+		printhang6()
+	} else if n == 2 {
+		printhang7()
+	} else if n == 1 {
+		printhang8()
+	} else if n == 0 {
+		printhang9()
+	}
+
+}
