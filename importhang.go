@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func ImportHang() []string { //import les hangman
+func ImportHang() []string { //import le hangman.txt
 
 	var hang []string
 

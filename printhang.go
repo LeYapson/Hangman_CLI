@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func PrintHang(n int) {
+func PrintHang(n int) { //affiche au terminal le hangman en fonction du nmbre d'essais restant
 	hang := ImportHang()
 
 	if n == 9 {

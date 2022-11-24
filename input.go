@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func input(vals ...interface{}) (string, error) { //ecrire une reponsse
+func input(vals ...interface{}) (string, error) { //permet de rentrer une valeur au terminal
 	if len(vals) != 0 {
 		fmt.Println(vals...)
 	}

@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func getLetter(found []string) (string, error) { //verifie si la valeur de input et bien une lettre
+func getLetter(found []string) (string, error) { //verifie si la valeur de input est bien une lettre
 
 	alphabet := "abcdefghijklmnopqrstuvwxyz"
 	for true {

@@ -7,7 +7,7 @@ func join(strings []string, separator string) string {
 	s := ""
 	lastIdx := len(strings) - 1
 	for _, v := range strings[0:lastIdx] {
-		s += v + separator // s = s + v + separator
+		s += v + separator
 	}
 	return s + strings[lastIdx]
 }
