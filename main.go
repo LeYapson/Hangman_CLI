@@ -2,16 +2,11 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
+	
 )
 
 func main() {
-	words := ImportTxt()
-	t := time.Now()
-	rand.Seed(t.UnixNano())
-	idx := rand.Intn(len(words))
-	word := words[idx]
+	word :=randomWord(ImportTxt())
 	nguesses := 10
 	found := []string{}
 	for i := 0; i < len(word); i++ {
