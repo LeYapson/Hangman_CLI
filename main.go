@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-	
 )
 
 func main() {
-	word :=randomWord(ImportTxt())
+	word := randomWord(ImportTxt())
 	nguesses := 10
 	found := blind(word)
 	if nguesses == 10 { //indice
