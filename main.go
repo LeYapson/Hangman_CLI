@@ -8,10 +8,7 @@ import (
 func main() {
 	word :=randomWord(ImportTxt())
 	nguesses := 10
-	found := []string{}
-	for i := 0; i < len(word); i++ {
-		found = append(found, "_")
-	}
+	found := blind(word)
 	if nguesses == 10 { //indice
 		fmt.Println("INDICE: les lettre suivantes sont présentes dans le mot :", "\n")
 		LettertoShow(word)
